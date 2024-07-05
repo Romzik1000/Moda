@@ -1,0 +1,41 @@
+.catalogs {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.catalogs-filters {
+  padding: 15px;
+  max-width: 270px;
+  width: 100%;
+  border: 1px solid $silver-200;
+  border-radius: 5px;
+  margin-right: 30px;
+  font-size: 18px;
+  letter-spacing: 3%;
+
+  &__title {
+    @extend %rubik-400;
+    font-size: 24px;
+  }
+  &__categories-items {
+    border-top: 1px solid $silver-200;
+    padding: 25px 0;
+  }
+  &__categories-item {
+    padding: 6px 0 ;
+  }
+}
+
+.catalogs-categories__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+}

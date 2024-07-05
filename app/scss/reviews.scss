@@ -1,0 +1,278 @@
+.reviews {
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__img {
+    max-width: 300px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 40px;
+  }
+
+  &__aside {
+    max-width: 640px;
+    width: 100%;
+
+  }
+
+  &__blockquote {
+    position: relative;
+    padding: 0 40px;
+
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @extend %rubik-italic-400;
+  }
+
+  &__svg {
+    content: '';
+    position: absolute;
+    @extend %bg;
+    width: 24px;
+    height: 20px;
+    fill: $gray;
+  }
+
+  &__svg--quote-open {
+    top: 5px;
+    left: 0;
+  }
+
+  &__svg--quote-close {
+    bottom: 0;
+    right: 0;
+
+  }
+
+  &__name,
+  &__expert {
+    padding-left: 40px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: $orange-900;
+    @extend %rubik-500;
+  }
+
+  &__expert {
+    display: block;
+    color: $dark;
+    font-size: 14px;
+    @extend %rubik-400;
+
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  border: 3px solid $gray;
+  background-size: 25px 25px;
+  top: auto;
+  bottom: 4px;
+  span {
+    width: 20px;
+    height: 20px;
+    filter: invert(73%) sepia(84%) saturate(0%) hue-rotate(153deg) brightness(89%) contrast(99%);
+  }
+}
+
+.swiper-button-prev {
+  left: 40%;
+  right: 0;
+}
+
+.swiper-button-next {
+  left: auto;
+  right: 40%;
+}
+
+.swiper-button-prev:focus,
+.swiper-button-next:focus {
+  box-shadow: 0 0 0 3px $orange-700;
+  span {
+    width: 20px;
+    height: 20px;
+    filter: invert(73%) sepia(84%) saturate(0%) hue-rotate(153deg) brightness(89%) contrast(99%);
+  }
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: $orange-100;
+    border: 3px solid $orange-700;
+
+ span {
+
+   filter: invert(48%) sepia(63%) saturate(1563%) hue-rotate(336deg) brightness(100%) contrast(102%);
+ }
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+  box-shadow: none;
+  border: none;
+}
+
+.swiper-container {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0 90px;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: $gray;
+
+  &:focus {
+    background-color: $gray;
+    box-shadow: 0 0 0 3px $orange-700;
+  }
+
+  &:hover {
+    background-color: $silver-300;
+    box-shadow: 0 0 0 3px $orange-700;
+    opacity: 0.8;
+  }
+
+  &:active {
+    background-color: $orange-700;
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: $xl) {
+
+  .reviews {
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__text,
+    &__name {
+      font-size: 18px;
+    }
+  }
+
+  .swiper-container {
+    padding: 0 0 60px;
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 50px;
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (max-width: $lg) {
+
+  .reviews {
+    &__text {
+      margin-bottom: 10px;
+    }
+
+    &__text,
+    &__name {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $md) {
+
+  .reviews {
+
+    &__img {
+      max-width: 200px;
+      width: 100%;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+    }
+
+    &__text,
+    &__name {
+      font-size: 18px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 60px;
+    right: auto;
+  }
+
+  .swiper-button-next {
+    left: 115px;
+    right: auto;
+  }
+}
+
+@media (max-width: $sm) {
+
+  .reviews {
+
+    &__slide {
+      display: block;
+    }
+
+    &__img {
+      max-width: 100px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    &__text,
+    &__name {
+      font-size: 14px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 10%;
+  }
+
+  .swiper-button-prev {
+    left: 5px;
+    right: auto;
+  }
+
+  .swiper-button-next {
+    left: auto;
+    right: 5px;
+  }
+}
